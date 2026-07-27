@@ -1,0 +1,25 @@
+[
+  {
+    "company": "[À compléter]",
+    "role": "Développeur Full Stack",
+    "dates": "[À compléter]",
+    "description": "[À compléter] — Développement et maintenance d'applications web en Java / Spring Boot côté backend et Angular côté frontend. Participation à la conception de l'architecture et aux code reviews.",
+    "achievements": [
+      "[À compléter] — Principale réalisation technique",
+      "[À compléter] — Impact métier ou amélioration de qualité",
+      "[À compléter] — Initiative ou projet transverse"
+    ],
+    "technologies": ["Java", "Spring Boot", "Angular", "TypeScript", "REST API", "JUnit", "Mockito", "SonarQube"]
+  },
+  {
+    "company": "[À compléter]",
+    "role": "Développeur Backend Java",
+    "dates": "[À compléter]",
+    "description": "[À compléter] — Conception et développement de microservices en Java / Spring Boot. Intégration avec des systèmes Cloud (GCP) et exposition d'API REST.",
+    "achievements": [
+      "[À compléter] — Principale réalisation technique",
+      "[À compléter] — Amélioration de performance ou maintenabilité"
+    ],
+    "technologies": ["Java", "Spring", "Spring Boot", "GCP", "Pub/Sub", "JPA / Hibernate", "REST API", "Docker"]
+  }
+]

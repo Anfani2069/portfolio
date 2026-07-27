@@ -1,0 +1,18 @@
+[
+  {
+    "name":"SaaSCollect",
+    "url":"https://saascollect.fr/",
+    "summary":"Projet SaaS personnel — outil de collecte et gestion pour [à préciser]. Développé et déployé en production.",
+    "technologies":["Angular","TypeScript","Java","Spring Boot","GCP"],
+    "image":"assets/project-saascollect.svg",
+    "type":"Projet personnel"
+  },
+  {
+    "name":"Bazar",
+    "url":"https://bazar-project-c6112.web.app/",
+    "summary":"Application web e-commerce expérimentale, conception frontend et intégration backend.",
+    "technologies":["Angular","TypeScript","Firebase","REST API"],
+    "image":"assets/project-bazar.svg",
+    "type":"Projet personnel"
+  }
+]

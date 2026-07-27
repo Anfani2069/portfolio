@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="SaaSCollect — aperçu projet">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F1F5F1"/>
+      <stop offset="100%" stop-color="#e4ede9"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#002F34" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bgGrad)"/>
+
+  <!-- Top bar (browser chrome) -->
+  <rect x="60" y="40" width="680" height="380" rx="12" fill="white" filter="url(#shadow)"/>
+  <rect x="60" y="40" width="680" height="42" rx="12" fill="#002F34"/>
+  <rect x="60" y="70" width="680" height="12" fill="#002F34"/>
+  <circle cx="88" cy="61" r="6" fill="#ff6058"/>
+  <circle cx="108" cy="61" r="6" fill="#ffbd2e"/>
+  <circle cx="128" cy="61" r="6" fill="#27c93f"/>
+  <rect x="200" y="51" width="300" height="20" rx="6" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Sidebar -->
+  <rect x="60" y="82" width="160" height="338" fill="#002F34" rx="0"/>
+  <!-- Sidebar logo -->
+  <rect x="80" y="102" width="32" height="32" rx="8" fill="#9EF7A8"/>
+  <text x="96" y="123" font-family="Inter, sans-serif" font-size="13" font-weight="800" fill="#002F34" text-anchor="middle">SC</text>
+  <text x="124" y="118" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="white">SaaSCollect</text>
+  <!-- Sidebar menu items -->
+  <rect x="76" y="158" width="128" height="28" rx="6" fill="rgba(158,247,168,0.15)"/>
+  <rect x="84" y="165" width="12" height="12" rx="3" fill="#9EF7A8"/>
+  <text x="102" y="176" font-family="Inter, sans-serif" font-size="11" fill="#9EF7A8" font-weight="600">Dashboard</text>
+  <rect x="84" y="197" width="12" height="12" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <text x="102" y="208" font-family="Inter, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Collectes</text>
+  <rect x="84" y="221" width="12" height="12" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <text x="102" y="232" font-family="Inter, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Analytics</text>
+  <rect x="84" y="245" width="12" height="12" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <text x="102" y="256" font-family="Inter, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Paramètres</text>
+
+  <!-- Main content area -->
+  <!-- Header bar -->
+  <text x="238" y="112" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="#002F34">Dashboard</text>
+  <rect x="620" y="97" width="100" height="28" rx="14" fill="#9EF7A8"/>
+  <text x="670" y="115" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#002F34" text-anchor="middle">+ Nouvelle</text>
+
+  <!-- KPI Cards -->
+  <rect x="232" y="134" width="130" height="70" rx="10" fill="#FAFAF7" stroke="#D8E1DD" stroke-width="1"/>
+  <text x="244" y="155" font-family="Inter, sans-serif" font-size="10" fill="#536666" font-weight="600">COLLECTES</text>
+  <text x="244" y="180" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#002F34">2 841</text>
+  <text x="244" y="195" font-family="Inter, sans-serif" font-size="9" fill="#005c3a">▲ +12% ce mois</text>
+
+  <rect x="374" y="134" width="130" height="70" rx="10" fill="#FAFAF7" stroke="#D8E1DD" stroke-width="1"/>
+  <text x="386" y="155" font-family="Inter, sans-serif" font-size="10" fill="#536666" font-weight="600">UTILISATEURS</text>
+  <text x="386" y="180" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#002F34">348</text>
+  <text x="386" y="195" font-family="Inter, sans-serif" font-size="9" fill="#005c3a">▲ +8% ce mois</text>
+
+  <rect x="516" y="134" width="130" height="70" rx="10" fill="#FAFAF7" stroke="#D8E1DD" stroke-width="1"/>
+  <text x="528" y="155" font-family="Inter, sans-serif" font-size="10" fill="#536666" font-weight="600">TAUX SUCCÈS</text>
+  <text x="528" y="180" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#002F34">94.2%</text>
+  <text x="528" y="195" font-family="Inter, sans-serif" font-size="9" fill="#536666">Stable</text>
+
+  <!-- Table -->
+  <rect x="232" y="222" width="498" height="180" rx="10" fill="#FAFAF7" stroke="#D8E1DD" stroke-width="1"/>
+  <text x="248" y="244" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#002F34">Dernières collectes</text>
+  <!-- Table rows -->
+  <line x1="232" y1="254" x2="730" y2="254" stroke="#D8E1DD" stroke-width="1"/>
+  <text x="248" y="269" font-family="Inter, sans-serif" font-size="9" fill="#536666" font-weight="600">NOM</text>
+  <text x="400" y="269" font-family="Inter, sans-serif" font-size="9" fill="#536666" font-weight="600">DATE</text>
+  <text x="530" y="269" font-family="Inter, sans-serif" font-size="9" fill="#536666" font-weight="600">STATUT</text>
+  <text x="650" y="269" font-family="Inter, sans-serif" font-size="9" fill="#536666" font-weight="600">RÉSULTAT</text>
+
+  <line x1="232" y1="278" x2="730" y2="278" stroke="#D8E1DD" stroke-width="0.5"/>
+  <text x="248" y="292" font-family="Inter, sans-serif" font-size="10" fill="#002F34">Collecte #1042</text>
+  <text x="400" y="292" font-family="Inter, sans-serif" font-size="10" fill="#536666">23 juil. 2026</text>
+  <rect x="527" y="283" width="44" height="15" rx="8" fill="rgba(158,247,168,0.2)"/>
+  <text x="549" y="294" font-family="Inter, sans-serif" font-size="9" fill="#005c3a" text-anchor="middle" font-weight="600">Succès</text>
+  <text x="650" y="292" font-family="Inter, sans-serif" font-size="10" fill="#002F34" font-weight="600">+2 410</text>
+
+  <line x1="232" y1="304" x2="730" y2="304" stroke="#D8E1DD" stroke-width="0.5"/>
+  <text x="248" y="318" font-family="Inter, sans-serif" font-size="10" fill="#002F34">Collecte #1041</text>
+  <text x="400" y="318" font-family="Inter, sans-serif" font-size="10" fill="#536666">22 juil. 2026</text>
+  <rect x="527" y="309" width="44" height="15" rx="8" fill="rgba(158,247,168,0.2)"/>
+  <text x="549" y="320" font-family="Inter, sans-serif" font-size="9" fill="#005c3a" text-anchor="middle" font-weight="600">Succès</text>
+  <text x="650" y="318" font-family="Inter, sans-serif" font-size="10" fill="#002F34" font-weight="600">+1 890</text>
+
+  <line x1="232" y1="330" x2="730" y2="330" stroke="#D8E1DD" stroke-width="0.5"/>
+  <text x="248" y="344" font-family="Inter, sans-serif" font-size="10" fill="#002F34">Collecte #1040</text>
+  <text x="400" y="344" font-family="Inter, sans-serif" font-size="10" fill="#536666">21 juil. 2026</text>
+  <rect x="527" y="335" width="52" height="15" rx="8" fill="rgba(255,180,0,0.12)"/>
+  <text x="553" y="346" font-family="Inter, sans-serif" font-size="9" fill="#996600" text-anchor="middle" font-weight="600">En cours</text>
+  <text x="650" y="344" font-family="Inter, sans-serif" font-size="10" fill="#536666">—</text>
+
+  <!-- Bottom label -->
+  <rect x="60" y="450" width="680" height="38" rx="8" fill="rgba(0,47,52,0.04)" stroke="#D8E1DD" stroke-width="1"/>
+  <text x="400" y="474" font-family="Inter, sans-serif" font-size="11" fill="#536666" text-anchor="middle" font-weight="500">saascollect.fr — Développé &amp; déployé en production</text>
+</svg>

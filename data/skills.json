@@ -1,0 +1,34 @@
+{
+  "Langages & Frameworks": [
+    { "name": "Java 8-21",       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+    { "name": "Angular 17+",     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" },
+    { "name": "Spring Boot 3.4", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
+    { "name": "TypeScript",      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+    { "name": "JavaScript",      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+    { "name": "Bootstrap",       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+    { "name": "jQuery",          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" }
+  ],
+  "Méthodologies": [
+    { "name": "Agile / Scrum",    "emoji": "🔄" },
+    { "name": "SAFe",             "emoji": "📐" },
+    { "name": "Microservices",    "emoji": "🧩" }
+  ],
+  "DevOps & Cloud": [
+    { "name": "GitLab CI/CD",    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" },
+    { "name": "GitHub Actions",  "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+    { "name": "Jenkins",         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" },
+    { "name": "Docker",          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+    { "name": "GCP",             "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+    { "name": "XL Deploy",       "emoji": "🚀" }
+  ],
+  "Outils": [
+    { "name": "Maven",       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" },
+    { "name": "JUnit",       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-plain.svg" },
+    { "name": "Postman",     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
+    { "name": "IntelliJ",    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" },
+    { "name": "SonarQube",   "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg" },
+    { "name": "MySQL",       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+    { "name": "PostgreSQL",  "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+    { "name": "Confluence",  "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg" }
+  ]
+}
