@@ -305,12 +305,14 @@ const EXPERIENCES_DATA = [
 /* ---- Scroll Reveal ---- */
 function initReveal() {
   const selectors = [
-    '.section-title', '.section-tab', '.about-layout', '.about-profile-card',
-    '.hero-stats', '.skills-card', '.exp-card', '.project-card',
-    '.blog-card', '.topic-card', '.learn-track', '.filter-bar', '.page-hero-sub',
+    '.skills-card', '.exp-card', '.project-card',
+    '.blog-card', '.topic-card', '.learn-track',
   ].join(', ');
 
+  const vh = window.innerHeight;
   document.querySelectorAll(selectors).forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < vh && rect.bottom > 0) return; /* déjà visible, on ne touche pas */
     el.setAttribute('data-reveal', '');
   });
 
@@ -330,7 +332,7 @@ function initReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px' });
 
   document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 }
