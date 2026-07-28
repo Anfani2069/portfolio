@@ -237,6 +237,18 @@ code, kbd, pre, samp,
 .btn-yellow:hover { filter: brightness(0.93); transform: translateY(-1px); }
 .btn-yellow.btn-large { font-size: 1.05rem; padding: 15px 34px; }
 
+.btn-arrow {
+  font-size: 1.15em;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.btn-dark:hover .btn-arrow,
+.btn-yellow:hover .btn-arrow,
+.btn-ghost:hover .btn-arrow { transform: translate(3px, -4px); }
+
 /* ============================================================
    PILLS (tags)
    ============================================================ */
@@ -856,13 +868,14 @@ code, kbd, pre, samp,
 }
 .company-badge {
   font-size: 0.62rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: var(--yellow);
+  background: var(--yellow-soft);
   color: var(--dark);
+  border: 1px solid var(--yellow-warm);
   padding: 2px 7px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   flex-shrink: 0;
 }
 
@@ -888,8 +901,7 @@ code, kbd, pre, samp,
   pointer-events: none;
   z-index: 0;
   background-image:
-    linear-gradient(rgba(244, 243, 238, 0.25), rgba(244, 243, 238, 0.25)),
-    url('../assets/Innovation-bro.png');
+    linear-gradient(rgba(244, 243, 238, 0.25), rgba(244, 243, 238, 0.25));
   background-size: auto, 340px;
   background-position: center, right 2% center;
   background-repeat: no-repeat, no-repeat;
@@ -990,7 +1002,7 @@ code, kbd, pre, samp,
    ============================================================ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -1022,7 +1034,7 @@ code, kbd, pre, samp,
 .project-thumb-wrap {
   overflow: hidden;
   border-bottom: 1px solid var(--border);
-  height: 165px;
+  height: 120px;
   background: var(--bg-secondary);
   flex-shrink: 0;
 }
@@ -1042,7 +1054,7 @@ code, kbd, pre, samp,
 }
 
 .project-body {
-  padding: 1.1rem 1.25rem 1.25rem;
+  padding: 0.9rem 1rem 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1352,4 +1364,18 @@ code, kbd, pre, samp,
   .contact-title { font-size: 2.2rem; }
 
   .exp-header  { flex-direction: column; gap: 0.5rem; }
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

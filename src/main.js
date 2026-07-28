@@ -302,12 +302,46 @@ const EXPERIENCES_DATA = [
   },
 ];
 
+/* ---- Scroll Reveal ---- */
+function initReveal() {
+  const selectors = [
+    '.section-title', '.section-tab', '.about-layout', '.about-profile-card',
+    '.hero-stats', '.skills-card', '.exp-card', '.project-card',
+    '.blog-card', '.topic-card', '.learn-track', '.filter-bar', '.page-hero-sub',
+  ].join(', ');
+
+  document.querySelectorAll(selectors).forEach(el => {
+    el.setAttribute('data-reveal', '');
+  });
+
+  /* stagger items inside grid/list containers */
+  document.querySelectorAll(
+    '.projects-grid, .experience-list, .skills-grid, .blog-grid, .topics-grid'
+  ).forEach(container => {
+    container.querySelectorAll('[data-reveal]').forEach((el, i) => {
+      el.style.setProperty('--reveal-delay', `${i * 0.09}s`);
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+}
+
 /* ---- Bootstrap ---- */
 async function init() {
   renderSkills(SKILLS_DATA);
   renderProjects(PROJECTS_DATA);
   renderExperiences(EXPERIENCES_DATA);
   initScrollSpy();
+  initReveal();
 }
 
 document.addEventListener('DOMContentLoaded', init);
