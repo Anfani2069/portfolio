@@ -305,7 +305,8 @@ const EXPERIENCES_DATA = [
 /* ---- Scroll Reveal ---- */
 function initReveal() {
   const selectors = [
-    '.skills-card', '.exp-card', '.project-card',
+    '.about-layout', '.about-profile-card', '.hero-stats', '.page-hero-sub',
+    '.filter-bar', '.skills-card', '.exp-card', '.project-card',
     '.blog-card', '.topic-card', '.learn-track',
   ].join(', ');
 
