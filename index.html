@@ -7,7 +7,9 @@
   <title>Abdou Anfani - Angular &amp; Java Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=DM+Sans:wght@400;500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
   <link rel="stylesheet" href="src/styles.css" />
 </head>
 <body>
@@ -21,18 +23,32 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="Accueil">
+      <a href="index.html" class="nav-logo" aria-label="Accueil">
         <img src="assets/logo.png" alt="AA" width="48" height="48" />
       </a>
       <ul class="nav-links">
         <li><span class="nav-dot" style="background:#8DDFC5"></span><a href="#about">A propos</a></li>
         <li><span class="nav-dot" style="background:#7CA7FF"></span><a href="#skills">Skills</a></li>
         <li><span class="nav-dot" style="background:#FF806D"></span><a href="#projects">Projets</a></li>
-        <li><span class="nav-dot" style="background:#BCA7F2"></span><a href="#experience">Expériences</a></li>
         <li><span class="nav-dot" style="background:#FFD166"></span><a href="learning.html">Cours</a></li>
         <li><span class="nav-dot" style="background:#F4A261"></span><a href="blog.html">Blog</a></li>
       </ul>
-      <a href="#contact" class="btn-dark nav-cta">Me contacter <span class="btn-arrow">&#8599;</span></a>
+      <a href="#experience" class="btn-dark nav-cta">Expériences <span class="btn-arrow">&#8599;</span></a>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul class="nav-mobile-links">
+        <li><span class="nav-dot" style="background:#8DDFC5"></span><a href="#about">A propos</a></li>
+        <li><span class="nav-dot" style="background:#7CA7FF"></span><a href="#skills">Skills</a></li>
+        <li><span class="nav-dot" style="background:#FF806D"></span><a href="#projects">Projets</a></li>
+        <li><span class="nav-dot" style="background:#FFD166"></span><a href="learning.html">Cours</a></li>
+        <li><span class="nav-dot" style="background:#F4A261"></span><a href="blog.html">Blog</a></li>
+      </ul>
+      <a href="#experience" class="btn-dark nav-mobile-cta">Expériences <span class="btn-arrow">&#8599;</span></a>
     </div>
   </nav>
 
@@ -40,45 +56,24 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
-      <span class="diamond deco-d1">&#10022;</span>
-      <span class="diamond deco-d2">&#10022;</span>
-      <span class="diamond deco-d3">&#10022;</span>
-      <span class="diamond deco-d4">&#10022;</span>
-
-      <!-- Floating tech snippets -->
-      <div class="hero-floats" aria-hidden="true">
-
-        <div class="float-chip fc-pink fc-1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-
-        <div class="float-chip fc-green fc-2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-        </div>
-
-        <div class="float-chip fc-cyan fc-3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-        </div>
-
-        <div class="float-chip fc-dark fc-4">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-        </div>
-
-        <div class="float-chip fc-peach fc-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-        </div>
-
-        <div class="float-chip fc-yellow fc-6">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-        </div>
-
+      <div class="hero-squares" aria-hidden="true">
+        <span class="hsq hsq-1"></span>
+        <span class="hsq hsq-2"></span>
+        <span class="hsq hsq-3"></span>
+        <span class="hsq hsq-4"></span>
+        <span class="hsq hsq-5"></span>
+        <span class="hsq hsq-6"></span>
+        <span class="hsq hsq-7"></span>
+        <span class="hsq hsq-8"></span>
+        <span class="hsq hsq-9"></span>
+        <span class="hsq hsq-10"></span>
       </div>
-
       <div class="hero-inner">
+
         <div class="hero-text">
           <h1 class="hero-title">
-            Hi, I'm <em class="highlight">A. ANFANI</em><br />
-            Java & Angular Developer.
+            <span class="hero-line">Hi, I'm <span class="hero-name">A. Anfani,<img class="hero-name-portrait" src="assets/moi.png" alt="Abdou Anfani" /></span></span>
+            <span class="hero-line">Java Angular <em class="hero-cursive">Developer.</em></span>
           </h1>
           <p class="hero-sub">
             Dévéloppeur Angular Java dévoué à l'excellence technique.
@@ -87,42 +82,28 @@
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn-yellow">Voir mes projets <span class="btn-arrow">&#8599;</span></a>
-            <a href="#contact" class="btn-ghost">Me contacter</a>
+            <a href="#experience" class="btn-ghost">Expériences</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-num">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" class="stat-icon" alt="Angular" />
-                Angular
-              </span>
-              <span class="stat-label">Frontend</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat">
-              <span class="stat-num">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" class="stat-icon" alt="Spring Boot" />
-                Spring Boot
-              </span>
-              <span class="stat-label">Backend</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat">
-              <span class="stat-num">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="stat-icon" alt="Java" />
-                Java
-              </span>
-              <span class="stat-label">Backend</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat">
-              <span class="stat-num">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" class="stat-icon" alt="GCP" />
-                GCP
-              </span>
-              <span class="stat-label">Cloud</span>
-            </div>
+          <div class="hero-tags">
+            <span class="htag">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="" />
+              Angular
+            </span>
+            <span class="htag">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="" />
+              Spring Boot
+            </span>
+            <span class="htag">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" />
+              Java
+            </span>
+            <span class="htag">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="" />
+              GCP
+            </span>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -131,77 +112,40 @@
       <div class="section-inner">
         <div class="section-tab">Parcours</div>
         <p class="companies-label">J&apos;ai travaill&eacute; chez eux</p>
-        <div class="marquee-track">
-          <div class="marquee-inner">
-            <!-- set 1 -->
-            <a href="https://www.groupeonepoint.com/fr/" target="_blank" rel="noopener" class="company-logo-item company-current">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groupeonepoint.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Onepoint</span>
-              <span class="company-badge">Actuel</span>
-            </a>
-            <a href="https://www.talan.com/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://talan.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Talan</span>
-            </a>
-            <a href="https://www.groupebpce.com/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groupebpce.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Groupe BPCE</span>
-            </a>
-            <a href="https://www.hexarq.com/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://hexarq.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Hexarq</span>
-            </a>
-            <a href="https://www.generali.fr/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://generali.fr&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Generali</span>
-            </a>
-            <a href="https://www.bivilink.com/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bivilink.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Bivilink</span>
-            </a>
-            <a href="https://www.cieux.org/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cieux.org&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Cieux</span>
-            </a>
-            <a href="https://www.zemus.fr/" target="_blank" rel="noopener" class="company-logo-item">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://zemus.fr&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Zemus</span>
-            </a>
-            <!-- set 2 (duplicate for seamless loop) -->
-            <a href="https://www.groupeonepoint.com/fr/" target="_blank" rel="noopener" class="company-logo-item company-current" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groupeonepoint.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Onepoint</span>
-              <span class="company-badge">Actuel</span>
-            </a>
-            <a href="https://www.talan.com/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://talan.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Talan</span>
-            </a>
-            <a href="https://www.groupebpce.com/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groupebpce.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Groupe BPCE</span>
-            </a>
-            <a href="https://www.hexarq.com/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://hexarq.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Hexarq</span>
-            </a>
-            <a href="https://www.generali.fr/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://generali.fr&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Generali</span>
-            </a>
-            <a href="https://www.bivilink.com/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bivilink.com&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Bivilink</span>
-            </a>
-            <a href="https://www.cieux.org/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cieux.org&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Cieux</span>
-            </a>
-            <a href="https://www.zemus.fr/" target="_blank" rel="noopener" class="company-logo-item" aria-hidden="true">
-              <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://zemus.fr&size=64" alt="" class="company-favicon" onerror="this.style.display='none'" />
-              <span>Zemus</span>
-            </a>
-          </div>
+        <div class="companies-grid">
+          <a href="https://www.groupeonepoint.com/fr/" target="_blank" rel="noopener" class="cg-item cg-current">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groupeonepoint.com&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Onepoint</span>
+            <span class="company-badge">Actuel</span>
+          </a>
+          <a href="https://www.talan.com/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://talan.com&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Talan</span>
+          </a>
+          <a href="https://www.groupebpce.com/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groupebpce.com&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Groupe BPCE</span>
+          </a>
+          <a href="https://www.hexarq.com/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://hexarq.com&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Hexarq</span>
+          </a>
+          <a href="https://www.generali.fr/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://generali.fr&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Generali</span>
+          </a>
+          <a href="https://www.bivilink.com/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bivilink.com&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Bivilink</span>
+          </a>
+          <a href="https://www.cieux.org/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cieux.org&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Cieux</span>
+          </a>
+          <a href="https://www.zemus.fr/" target="_blank" rel="noopener" class="cg-item">
+            <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://zemus.fr&size=64" alt="" class="cg-favicon" onerror="this.style.display='none'" />
+            <span class="cg-name">Zemus</span>
+          </a>
         </div>
       </div>
     </section>

@@ -207,24 +207,24 @@ function initScrollSpy() {
 const PROJECTS_DATA = [
   {
     name: 'Ng Experts',
-    url: 'https://ng-experts.web.app',
-    summary: 'Plateforme Angular dédiée aux ressources et bonnes pratiques pour développeurs Angular.',
+    url: 'https://www.ng-experts.fr',
+    summary: 'Trouvez rapidement des experts Angular qualifiés et vérifiés. Filtrez par ville, technologie et disponibilité pour identifier le bon profil en quelques secondes.',
     technologies: ['Angular', 'TypeScript', 'Firebase'],
     image: 'assets/ng-experts.png',
     type: 'Projet personnel',
   },
   {
     name: 'Saas Collect',
-    url: 'https://saas-collection.web.app/',
-    summary: 'Projet SaaS personnel — outil de collecte et gestion de données. Développé et déployé en production.',
+    url: 'https://www.saascollect.fr',
+    summary: 'Découvrez les meilleurs SaaS et startups françaises. Collection complète d\'outils made in France par catégorie, technologie et avis utilisateurs.',
     technologies: ['Angular', 'TypeScript', 'Java', 'Spring Boot', 'GCP'],
     image: 'assets/saascollect.png',
     type: 'Projet personnel',
   },
   {
     name: 'Bazar Comores',
-    url: 'https://bazar-project-c6112.web.app/',
-    summary: 'Application web e-commerce expérimentale, conception frontend et intégration backend.',
+    url: 'https://www.bazarcomores.com',
+    summary: 'Bazar Comores est né d\'un constat simple : la diaspora comorienne en France souhaitait offrir à ses proches les produits locaux qu\'ils aiment. Grâce à nos magasins partenaires aux Comores, c\'est désormais possible en quelques clics.',
     technologies: ['Angular', 'TypeScript', 'Firebase', 'REST API'],
     image: 'assets/bazar-comores.png',
     type: 'Projet personnel',
@@ -348,3 +348,32 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+/* ============================================================
+   Burger menu
+   ============================================================ */
+(function () {
+  const burger = document.querySelector('.nav-burger');
+  const panel  = document.querySelector('.nav-mobile');
+  if (!burger || !panel) return;
+
+  function close() {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Ouvrir le menu');
+    panel.classList.remove('is-open');
+    panel.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', () => {
+    const isOpen = burger.getAttribute('aria-expanded') === 'true';
+    if (isOpen) { close(); return; }
+    burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Fermer le menu');
+    panel.classList.add('is-open');
+    panel.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();

@@ -132,11 +132,25 @@
         <li><span class="nav-dot" style="background:#8DDFC5"></span><a href="index.html#about">A propos</a></li>
         <li><span class="nav-dot" style="background:#7CA7FF"></span><a href="index.html#skills">Skills</a></li>
         <li><span class="nav-dot" style="background:#FF806D"></span><a href="index.html#projects">Projets</a></li>
-        <li><span class="nav-dot" style="background:#BCA7F2"></span><a href="index.html#experience">Expériences</a></li>
-        <li><span class="nav-dot" style="background:#FFD166"></span><a href="learning.html">Apprentissage</a></li>
+        <li><span class="nav-dot" style="background:#FFD166"></span><a href="learning.html">Cours</a></li>
         <li><span class="nav-dot" style="background:#F4A261"></span><a href="blog.html" class="nav-active">Blog</a></li>
       </ul>
-      <a href="index.html#contact" class="btn-dark nav-cta">Me contacter <span class="btn-arrow">&#8599;</span></a>
+      <a href="index.html#experience" class="btn-dark nav-cta">Expériences <span class="btn-arrow">&#8599;</span></a>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul class="nav-mobile-links">
+        <li><span class="nav-dot" style="background:#8DDFC5"></span><a href="index.html#about">A propos</a></li>
+        <li><span class="nav-dot" style="background:#7CA7FF"></span><a href="index.html#skills">Skills</a></li>
+        <li><span class="nav-dot" style="background:#FF806D"></span><a href="index.html#projects">Projets</a></li>
+        <li><span class="nav-dot" style="background:#FFD166"></span><a href="learning.html">Cours</a></li>
+        <li><span class="nav-dot" style="background:#F4A261"></span><a href="blog.html" class="nav-active">Blog</a></li>
+      </ul>
+      <a href="index.html#experience" class="btn-dark nav-mobile-cta">Expériences <span class="btn-arrow">&#8599;</span></a>
     </div>
   </nav>
 
@@ -229,12 +243,43 @@
     </div>
   </footer>
 
+  <!-- COMING SOON MODAL -->
+  <div class="cs-backdrop" id="cs-backdrop" role="dialog" aria-modal="true" aria-labelledby="cs-title" aria-hidden="true">
+    <div class="cs-modal">
+      <button class="cs-close" id="cs-close" aria-label="Fermer">✕</button>
+      <span class="cs-sparkle">✦</span>
+      <h2 class="cs-title" id="cs-title">Bientôt disponible</h2>
+      <span class="cs-subtitle">patience, ça arrive !</span>
+      <p class="cs-text">Cet article est en cours de rédaction.<br />Je travaille dessus avec soin — revenez bientôt !</p>
+      <div class="cs-dots">
+        <span style="background:#8DDFC5"></span>
+        <span style="background:#7CA7FF"></span>
+        <span style="background:#FAE261"></span>
+        <span style="background:#FF806D"></span>
+      </div>
+      <button class="cs-cta" id="cs-close-btn">Compris !</button>
+    </div>
+  </div>
+
   <script src="src/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const loader = document.getElementById('page-loader');
       if (loader) setTimeout(() => loader.classList.add('hidden'), 400);
       if (typeof initReveal === 'function') initReveal();
+
+      const backdrop = document.getElementById('cs-backdrop');
+      const openModal = () => { backdrop.classList.add('open'); backdrop.removeAttribute('aria-hidden'); };
+      const closeModal = () => { backdrop.classList.remove('open'); backdrop.setAttribute('aria-hidden', 'true'); };
+
+      document.querySelectorAll('.blog-card-read, .blog-card').forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', e => { e.preventDefault(); openModal(); });
+      });
+      document.getElementById('cs-close').addEventListener('click', closeModal);
+      document.getElementById('cs-close-btn').addEventListener('click', closeModal);
+      backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
     });
   </script>
 </body>
